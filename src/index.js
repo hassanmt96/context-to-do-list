@@ -7,9 +7,9 @@ import TodoContext from "./contexts/TodoContext"
 
 ReactDOM.render(
   <React.StrictMode>
-    <TodoContext.Provider value={AppWithContext.state}>
-      <App />
-    </TodoContext.Provider>
+
+      <AppWithContext/>
+   
   </React.StrictMode>,
   document.getElementById('root')
 );

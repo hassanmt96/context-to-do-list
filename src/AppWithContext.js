@@ -14,6 +14,7 @@ class AppWithContext extends React.Component{
     }
 
     createTask = (task) => {
+        debugger
         const nextTaskId = (new Date()).getTime();
         const newTask =   {
             [nextTaskId]:
@@ -47,7 +48,10 @@ class AppWithContext extends React.Component{
 
     render() {
         return (
-            null
+            
+           <TodoContext.Provider value={this.state}>
+               <App/>
+           </TodoContext.Provider>
           // TODO: Use a Provider component to wrap the App component
           // TODO: Use the AppWithContext state as the Provider component's `value`
         );
