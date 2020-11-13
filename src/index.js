@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import AppWithContext from "./AppWithContext"
 import TodoContext from "./contexts/TodoContext"
 
 ReactDOM.render(
   <React.StrictMode>
     <TodoContext.Provider value={AppWithContext.state}>
-      <App />
+      <AppWithContext />
     </TodoContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
